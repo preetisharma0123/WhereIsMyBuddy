@@ -1,4 +1,4 @@
-# web_app
+# Where Is My Buddy Backend
 
 ## Project setup
 ```
