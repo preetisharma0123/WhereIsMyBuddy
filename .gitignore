@@ -1,0 +1,15 @@
+# Mac files
+*DS_Store*
+
+# Windows files
+Thumbs.db
+
+# dependencies
+node_modules
+
+#  environment variables
+.env-development
+
+# Logs
+logs
+*.log
