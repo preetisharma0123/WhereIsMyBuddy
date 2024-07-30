@@ -8,7 +8,8 @@ Thumbs.db
 node_modules
 
 #  environment variables
-.env-development
+.env.development
+.env.production
 
 # Logs
 logs
