@@ -10,7 +10,12 @@ node_modules
 #  environment variables
 .env.development
 .env.production
+.env
+.env.*example
 
 # Logs
 logs
 *.log
+
+
+9-feat-backend-set-up-winston-for-logging
