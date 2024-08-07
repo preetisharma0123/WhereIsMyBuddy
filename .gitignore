@@ -10,6 +10,7 @@ node_modules
 #  environment variables
 .env.development
 .env.production
+.env
 
 # Logs
 logs
