@@ -1,7 +1,8 @@
-# Stage 1: Build the application
+# Use an official Node.js image based on Alpine Linux
 FROM node:latest AS builder
 
 # Set the working directory inside the container
+WORKDIR /frontend
 WORKDIR /frontend
 
 # Copy the package.json and package-lock.json (or yarn.lock or pnpm-lock.yaml) to the working directory
@@ -22,18 +23,20 @@ RUN npm run build
 
 # Stage 2: Serve the application using serve
 FROM node:latest
+FROM node:latest
 
 # Install serve globally
 RUN npm install -g serve
 
 # Set the working directory inside the container
 WORKDIR /frontend
+WORKDIR /frontend
 
 # Copy the build output from the builder stage to the working directory
 COPY --from=builder /frontend/dist .
 
 # Expose port 5000 to the outside world
-EXPOSE 5000
+EXPOSE ${PORT}
 
 # Start the serve server
-CMD ["serve", "-s", ".", "-l", "5000"]
+CMD ["serve", "-s", ".", "-l","${PORT}"]
