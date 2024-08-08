@@ -7,8 +7,11 @@ WORKDIR /app
 # Copy the package.json and package-lock.json to the working directory
 COPY package.json package-lock.json ./
 
-# Install dependencies
-RUN npm install --only=production
+# Install all dependencies, including devDependencies
+RUN npm install
+
+# Install nodemon globally for development
+RUN npm install -g nodemon
 
 # Copy the rest of the application code to the working directory
 COPY . .
@@ -16,9 +19,8 @@ COPY . .
 # Copy the environment variables file
 COPY .env .env
 
-# Expose the port defined in the .env file
+# Expose the port for development
 EXPOSE ${PORT}
 
-# Command to run the application in production
-CMD ["node", "index.js"]
-
+# Command to run the application with nodemon for hot-reloading in development
+CMD ["nodemon", "index.js"]
