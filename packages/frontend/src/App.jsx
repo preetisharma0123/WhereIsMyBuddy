@@ -16,7 +16,7 @@ function App() {
     <div className="h-screen flex flex-col gap-10 justify-center items-center bg-gray-900">
       <h1 className="text-4xl text-red-600">Where is my buddy</h1>
       <Card className="max-w-[400px]">
-        <CardHeader className="flex gap-2">
+        <CardHeader className="flex gap-3">
           <Image
             alt="nextui logo"
             height={40}
