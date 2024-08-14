@@ -12,8 +12,8 @@
 ## Related Issues
 <!-- 🚫 Please list any issues related to this pull request.
 If your PR closes an open issue, link your PR to the issue with Closes #16 or Fixes #16, where #16 is the issue number. For example:
-Closes #16
-Fixes #42
+- Closes #16
+- Fixes #42
 Please put the close or fix statement in a bullet point so that it renders the issue title as well. -->
 
 

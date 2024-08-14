@@ -1,7 +1,7 @@
-const app = require("./app");
-const logger = require("./utils/logger");
-const serverConfig = require("./config/server.config");
-const connectToDatabase = require("./config/database.config");
+const app = require('./app');
+const logger = require('./utils/logger');
+const serverConfig = require('./config/server.config');
+const connectToDatabase = require('./config/database.config');
 
 const startServer = async () => {
   try {
@@ -14,7 +14,7 @@ const startServer = async () => {
       logger.info(`Environment: ${serverConfig.environment}`);
     });
   } catch (error) {
-    logger.error("Failed to start the server:", error);
+    logger.error('Failed to start the server:', error);
     process.exit(1);
   }
 };
