@@ -1,0 +1,23 @@
+{
+  "name": "whereismybuddy",
+  "version": "0.0.1",
+  "description": "Collaborative study application!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:preetisharma0123/WhereIsMyBuddy.git"
+  },
+  "keywords": [
+    "study",
+    "buddies",
+    "group",
+    "collaboration",
+    "discord"
+  ],
+  "author": "The Buddies Gang",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.4"
+  }
+}
