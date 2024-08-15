@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Signin from '../src/components/signin';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <>
-      <h1>Where is my buddy?</h1>
+      <p>Where is my buddy?</p>
+      <Routes>
+        <Route path="/signin" element={<Signin />} />
+      </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
