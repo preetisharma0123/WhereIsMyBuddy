@@ -15,10 +15,8 @@
   ],
   "author": "The Buddies Gang",
   "scripts": {
-    "prepare": "husky"
   },
   "devDependencies": {
-    "husky": "^9.1.4",
     "react-router-dom": "^6.26.0"
   }
 }
