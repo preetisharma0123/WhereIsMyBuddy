@@ -26,7 +26,7 @@ const signin = () => {
               {/* Labels - Inputs - Forgot_password - Sign_In_Button */}
               <div>
                 <label className="text-base max-[1600px]:text-sm">Email</label>
-                <Input type="Email" size="sm" placeholder="Example@gmail.com" />
+                <Input type="Email" placeholder="Example@gmail.com" />
               </div>
               <div className="my-5 max-[1600px]:my-3">
                 <label className="text-base max-[1600px]:text-sm">Password</label>
@@ -49,7 +49,7 @@ const signin = () => {
               <div className="flex flex-col items-center gap-y-5 max-[1600px]:gap-y-2">
                 {/* Google and Discord Buttons and Sign_Up link */}
                 <Button
-                  className="bg-google-button w-full max-[1600px]:text-sm"
+                  className="w-full bg-google-button max-[1600px]:text-sm"
                   radius="sm"
                   startContent={<Google_svg />}
                   size="md"
@@ -57,7 +57,7 @@ const signin = () => {
                   Sign in with Google
                 </Button>
                 <Button
-                  className="bg-google-button w-full max-[1600px]:text-sm"
+                  className="w-full bg-google-button max-[1600px]:text-sm"
                   radius="sm"
                   startContent={<Discord_svg />}
                   size="md"
