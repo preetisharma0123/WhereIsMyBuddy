@@ -70,6 +70,12 @@ chmod ug+x .husky/*
 chmod ug+x .git/hooks/*
 ```
 
+In case of the warning message husky - '~/.huskyrc' is DEPRECATED, use below commands:
+```bash
+mkdir -p ~/.config/husky
+mv ~/.huskyrc ~/.config/husky/init.sh
+npm install -g npm
+```
 ### Contributing
 
 We welcome contributions to improve this project. Please fork the repository and submit a pull request.
