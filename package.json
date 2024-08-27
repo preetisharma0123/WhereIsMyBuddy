@@ -15,7 +15,8 @@
   ],
   "author": "The Buddies Gang",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky && chmod ug+x .husky/*"
+
   },
   "devDependencies": {
     "husky": "^9.1.4",
