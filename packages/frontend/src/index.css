@@ -4,4 +4,6 @@
 
 body {
   font-family: 'Roboto';
+  min-height: 100%;
+  /* height: 'min-h-screen'; */
 }
