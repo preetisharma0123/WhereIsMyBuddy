@@ -17,8 +17,8 @@ const AuthLayout = ({ children, imageSrc }: AuthLayoutProps) => {
           </div>
           <div>{children}</div>
         </div>
-        <div className="h-full w-full basis-1/2">
-          <Image src={imageSrc} classNames={{ img: 'h-full w-full' }} alt="login image" isZoomed />
+        <div className="basis-1/2">
+          <Image src={imageSrc} className="min-h-[850px]" alt="login image" isZoomed />
         </div>
       </div>
     </div>
