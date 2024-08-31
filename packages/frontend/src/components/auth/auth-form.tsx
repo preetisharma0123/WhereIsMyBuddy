@@ -24,7 +24,7 @@ const AuthForm = () => {
 
       <div className="inline-flex items-center justify-center">
         <hr className="h-px w-full border-0 bg-gray-200 dark:bg-gray-700" />
-        <span className="mx-4 my-6 text-sm">Or</span>
+        <span className="mx-4 my-4 text-sm">Or</span>
         <hr className="h-px w-full border-0 bg-gray-200 dark:bg-gray-700" />
       </div>
 

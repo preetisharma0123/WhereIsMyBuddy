@@ -60,7 +60,7 @@ const Signupform = () => {
         >
           Sign in with Discord
         </Button>
-        <p className="pt-[24px]">
+        <p className="pt-[10px]">
           Already have an account?{' '}
           <a href="#" className="text-blue-600">
             Sign In
