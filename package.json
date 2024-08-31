@@ -16,10 +16,12 @@
   "author": "The Buddies Gang",
   "scripts": {
     "prepare": "husky && chmod ug+x .husky/*"
-
   },
   "devDependencies": {
-    "husky": "^9.1.4",
+    "husky": "7.0.0",
     "react-router-dom": "^6.26.0"
+  },
+  "dependencies": {
+    "lint-staged": "^15.2.9"
   }
 }

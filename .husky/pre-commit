@@ -1,3 +1,8 @@
+#!/bin/sh
+set -x
+# Existing hook commands
+echo test
+
 # Check changed files between frontend and backend
 
 # If frontend has no changes, no need to run frontend lint-staged
@@ -11,4 +16,5 @@ if [ -n "$(git status packages/backend --porcelain --untracked-files=no)" ]; the
   cd packages/backend
   npx lint-staged
 fi
-echo test
+
+
