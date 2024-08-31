@@ -29,12 +29,7 @@
     "lint-staged": "^15.2.9"
   },
   "validate-branch-name": {
-    "rules": {
-      "branch-name": [
-        "error",
-        "always",
-        "^([a-z]+\\/)?gh-[0-9]+\\/[a-z0-9\\-]+$"
-      ]
-    }
-}
+    "pattern": "^(([a-z]+(-|\\/))|)((gh-|))[0-9]+(-|\\/)[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$",
+    "errorMsg": "Please check README (section: For errors related to branch name or commit message format) to understand how we name our branches."
+  }
 }
