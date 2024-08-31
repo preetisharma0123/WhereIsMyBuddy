@@ -11,11 +11,9 @@ module.exports = {
 			[
 				'build',
 				'chore',
-				'ci',
 				'docs',
 				'feat',
 				'fix',
-				'perf',
 				'refactor',
 				'revert',
 				'style',
@@ -55,11 +53,6 @@ module.exports = {
 						title: 'Code Refactoring',
 						emoji: '📦',
 					},
-					perf: {
-						description: 'A code change that improves performance',
-						title: 'Performance Improvements',
-						emoji: '🚀',
-					},
 					test: {
 						description: 'Adding missing tests or correcting existing tests',
 						title: 'Tests',
@@ -71,21 +64,10 @@ module.exports = {
 						title: 'Builds',
 						emoji: '🛠',
 					},
-					ci: {
-						description:
-							'Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)',
-						title: 'Continuous Integrations',
-						emoji: '⚙️',
-					},
 					chore: {
 						description: "Other changes that don't modify src or test files",
 						title: 'Chores',
 						emoji: '♻️',
-					},
-					revert: {
-						description: 'Reverts a previous commit',
-						title: 'Reverts',
-						emoji: '🗑',
 					},
 				},
 			},
