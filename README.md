@@ -102,6 +102,17 @@ npm -v
 ```bash
 .husky/pre-commit
 ```
+- For errors related to branch name or commit message format:
+Please note: We follow a loose convention for branch names
+```
+[type]/gh-[issue number]/[summary of task]
+
+gh-16/setup-ci-frontend-tests
+docs/gh-16/fix-typos
+```
+where `16` is the issue number.
+
+For commit message format checkout - [link](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ### Contributing
 
