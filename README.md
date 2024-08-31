@@ -98,6 +98,10 @@ Verify the installation:
 node -v
 npm -v
 ```
+- Run Hooks Manually
+```bash
+.husky/pre-commit
+```
 
 ### Contributing
 
