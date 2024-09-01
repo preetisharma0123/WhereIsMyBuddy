@@ -15,7 +15,7 @@
   ],
   "author": "The Buddies Gang",
   "scripts": {
-    "prepare": "husky && chmod ug+x .husky/*"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.4.1",
