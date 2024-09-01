@@ -12,7 +12,7 @@ const AuthLayout = ({ children, imageSrc }: AuthLayoutProps) => {
     <div className="flex min-h-screen items-center justify-center bg-white">
       <div className="m-8 flex h-full w-full max-w-[1200px] flex-row">
         <div className="flex h-full basis-1/2 flex-col items-center justify-center">
-          <div className="mb-24">
+          <div className="mb-[110px]">
             <Logo_svg />
           </div>
           <div>{children}</div>
