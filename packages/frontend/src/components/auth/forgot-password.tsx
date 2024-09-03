@@ -17,7 +17,11 @@ const ForgotPasswordForm = () => {
       <div className="flex flex-col items-center space-y-6">
         <p className="pt-[24px]">
           Go back to{' '}
-          <a href="#" className="text-blue-600">
+          <a
+            href="/signin
+          "
+            className="text-blue-600"
+          >
             Sign In
           </a>
         </p>

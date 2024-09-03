@@ -15,7 +15,7 @@ const AuthForm = () => {
         <label className="-sm text-base">Password</label>
         <Input variant="bordered" radius="sm" type="Password" placeholder="At least 8 characters" />
       </div>
-      <a href="" className="mb-3 text-right text-sm text-blue-600">
+      <a href="/forgot-password" className="mb-3 text-right text-sm text-blue-600">
         Forgot Password?
       </a>
       <Button radius="sm" className="rounded-lg bg-signin-blue text-white" size="md">
@@ -47,7 +47,7 @@ const AuthForm = () => {
         </Button>
         <p className="pt-[24px]">
           Don't you have an account?{' '}
-          <a href="#" className="text-blue-600">
+          <a href="/signup" className="text-blue-600">
             Sign up
           </a>
         </p>
