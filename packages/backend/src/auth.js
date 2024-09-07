@@ -1,50 +1,21 @@
-const express = require('express');
-const mongoose = require('mongoose'); // Use require instead of import
-const { Lucia } = require('lucia');
-const { MongodbAdapter } = require('@lucia-auth/adapter-mongodb');
-const connectToDatabase = require('./config/database.config'); // Use require instead of import
+/* eslint-disable no-unused-vars */
+const mongoose = require('mongoose'); 
+const session = require('express-session');
+const connectToDatabase = require('./config/database.config'); 
 
-const app = express();
+let lucia;
+let MongodbAdapter;
 
 (async function initialize() {
     try {
         // Connect to MongoDB
         await connectToDatabase();
 
-        // Define the User and Session models
-        const User = mongoose.model(
-            'User',
-            new mongoose.Schema(
-                {
-                    _id: {
-                        type: String,
-                        required: true
-                    }
-                },
-                { _id: false }
-            )
-        );
-
-        const Session = mongoose.model(
-            'Session',
-            new mongoose.Schema(
-                {
-                    _id: {
-                        type: String,
-                        required: true
-                    },
-                    user_id: {
-                        type: String,
-                        required: true
-                    },
-                    expires_at: {
-                        type: Date,
-                        required: true
-                    }
-                },
-                { _id: false }
-            )
-        );
+        // Dynamically import Lucia and MongodbAdapter
+        const { Lucia } = await import('lucia');
+        const { MongodbAdapter: ImportedMongodbAdapter } = await import('@lucia-auth/adapter-mongodb');
+        
+        MongodbAdapter = ImportedMongodbAdapter;
 
         // Initialize Lucia with the adapter
         const adapter = new MongodbAdapter(
@@ -52,16 +23,19 @@ const app = express();
             mongoose.connection.collection('users')
         );
 
-        const lucia = new Lucia(adapter, {
+        lucia = new Lucia(adapter, {
             sessionCookie: {
                 expires: false,
                 attributes: {
-                    secure: process.env.NODE_ENV === 'production'
+                    secure: process.env.NODE_ENV === 'production',
+                    httpOnly: true, // Prevent client-side access to the cookie
+                    sameSite: 'strict', // SameSite policy for CSRF protection
                 }
             }
         });
 
         // Middleware to handle Lucia authentication
+        // This allows you to use Lucia for handling authentication in your Express app
         module.exports.luciaMiddleware = function () {
             return lucia.middleware();
         };

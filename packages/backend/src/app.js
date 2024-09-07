@@ -8,6 +8,7 @@ const serverConfig = require('./config/server.config');
 const bodyParser = require('body-parser'); 
 const { luciaMiddleware } = require('./auth.js'); // Import Lucia middleware setup
 const routes = require('./routes');
+const swaggerDocs = require('./swagger-ui/swagger');
 
 const app = express();
 
@@ -20,11 +21,23 @@ app.use(morgan('combined', { stream: logger.stream })); // Logging
 app.use('/protected', luciaMiddleware()); // Apply Lucia middleware to specific routes
 
 // Use the routes defined in index.js
-const routes = require('./routes'); // Import routes from index.js
 app.use('/', routes); // Mount all routes under the root path
 
 // Error handling middleware
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
+app.use(middleware.sessionMiddleware);
+
+//v1 api routes
+app.use('/api/v1', routes);
+
+// sawgger ui docs
+swaggerDocs(app);
+
+//v1 api routes
+app.use('/api/v1', routes);
+
+// sawgger ui docs
+swaggerDocs(app);
 
 module.exports = app;
