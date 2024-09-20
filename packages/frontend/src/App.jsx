@@ -4,6 +4,7 @@ import Signin from './pages/auth/signin';
 import ChangePassword from './pages/auth/change-password';
 import Signup from './pages/auth/signup';
 import Forgotpassword from './pages/auth/forgot-password';
+import NotFound from './pages/not-found/not-found';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/change-password" element={<ChangePassword />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<Forgotpassword />} />
+        <Route path="/not-found" element={<NotFound />} />
       </Routes>
     </Router>
   );
